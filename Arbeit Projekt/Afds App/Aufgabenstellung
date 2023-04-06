@@ -1,0 +1,14 @@
+
+Aufgabe:
+-button 
+    -der aufs adfs weiterleitet (login)
+-alle infos zurück
+-seite vor anmelden
+-seite nach anmelden
+
+-pagewithauthwithforcedloginguard --> findet raus ob man angemeldet ist (ja = ok cool) (nein = leitet automatisch auf die login page weiter)
+-pagewithauthguard --> findet raus ob man angemeldet ist (ja/nein)
+
+-config datei mit allen infos die in den adfs rein müssen
+
+-gucken was in java oauth2 (angular) ersetzen kann welcher import
