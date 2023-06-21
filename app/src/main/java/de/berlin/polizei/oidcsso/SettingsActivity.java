@@ -114,9 +114,9 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onAccountsUpdated(Account[] accounts) {
                 if (Utils.getCurrentUser(getApplicationContext()) != null) {
-                    startService();
+                    startS();
                 } else {
-                    stopService();
+                    stopS();
                 }
             }
         };
@@ -178,12 +178,12 @@ public class SettingsActivity extends AppCompatActivity {
         });
     }
 
-    public void startService(){
+    public void startS(){
         Intent serviceIntent = new Intent(this, LoginNotificationService.class);
         startService(serviceIntent);
     }
 
-    public void stopService(){
+    public void stopS(){
         Intent serviceIntent = new Intent(this, LoginNotificationService.class);
         stopService(serviceIntent);
     }
@@ -195,7 +195,6 @@ public class SettingsActivity extends AppCompatActivity {
         i.putExtra("test",true);
         //startActivityForResult(i,1);
         startActivity(i);
-
 
 
     }

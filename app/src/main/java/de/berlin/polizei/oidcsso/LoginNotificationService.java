@@ -6,6 +6,7 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.IBinder;
 
 import androidx.annotation.Nullable;
@@ -24,11 +25,18 @@ public class LoginNotificationService extends Service {
         PendingIntent pendingIntent = PendingIntent.getActivity(this,
                 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
 
+        Intent LogoutIntent = new Intent(this, notificationActionbutton.class);
+        PendingIntent actionIntent = PendingIntent.getActivity(this,
+                0, LogoutIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("@strings/notificationTitel")
-                .setContentText("@strings/notificationInhalt")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(getString(R.string.notificationTitel))
+                .setContentText(getString(R.string.notificationInhalt))
+                .setColor(Color.BLUE)
                 .setContentIntent(pendingIntent)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .addAction(R.mipmap.ic_launcher, getString(R.string.NotificationActionButton), actionIntent)
                 .build();
 
         startForeground(1, notification);

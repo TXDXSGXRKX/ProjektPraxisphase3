@@ -69,7 +69,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".ExampleService" />"
+        <activity android:name=".notificationActionbutton"/>
+        <service android:name=".LoginNotificationService" />"
         <service android:exported="true" android:name=".authenticator.AuthenticatorService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />

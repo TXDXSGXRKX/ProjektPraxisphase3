@@ -79,6 +79,7 @@
     <string name="impressum">An-/Abmeldung</string>
     <string name="impressum_summary">Polizei Berlin\nDir ZS IKT PG MIKT\nPlatz der Luftbrücke 6\n12101 Berlin\n\nVersion: {VERSION}</string>
 
-    <string name="notificationTitel">notification?</string>
-    <string name="notificationInhalt">glaube es funktioniert</string>
+    <string name="notificationTitel">adfs</string>
+    <string name="notificationInhalt">Sie sind im System angemeldet</string>
+    <string name="NotificationActionButton">Logout</string>
 </resources>
